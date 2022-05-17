@@ -25,7 +25,8 @@ class CreateUsersTable extends Migration
             $table->string("role");
             $table->string('password');
             $table->integer('consultation_status')->default(0);
-            $table->integer('vaccination_status')->default(0);
+            $table->boolean('first_vaccination')->default(false);
+            $table->boolean('second_vaccination')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

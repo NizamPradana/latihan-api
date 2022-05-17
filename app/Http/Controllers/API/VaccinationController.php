@@ -19,4 +19,7 @@ class VaccinationController extends Controller
         $vaccine = Vaccination::where("user_id", $id_user)->with("user")->with("vaccinespot")->get();
         return $vaccine;
     }
+
+    
+
 }

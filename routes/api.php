@@ -59,6 +59,8 @@ Route::group(["middleware" => "auth:sanctum"] , function(){
 
     Route::get("/v1/vaccination/{id_user}", [VaccinationController::class, "show"]);
 
+    
+
 });
 
 Route::get('/login', function(){
