@@ -17,9 +17,12 @@ class VaccinationController extends Controller
     public function show($id_user)
     {
         $vaccine = Vaccination::where("user_id", $id_user)->with("user")->with("vaccinespot")->get();
-        return $vaccine;
+        return response()->json([
+            "success" => true,
+            "data" => $vaccine
+        ], 200);
     }
 
-    
+
 
 }
